@@ -1,0 +1,33 @@
+$ORIGIN nombre1.com.
+@soa
+
+
+pc1 A 172.16.0.10
+pc2 A 172.16.0.11
+r1a A 172.16.0.9
+
+
+$ORIGIN nombre2.com.
+@soa ()
+
+
+pc3 A 172.16.0.3
+pc4 A 172.16.0.2
+linux A 172.16.0.4
+r2a A 172.16.0.1
+
+
+$ORIGIN nombre3.com.
+@soa ()
+
+
+r1b A 172.16.0.17
+r3a A 172.16.0.18
+
+
+$ORIGIN nombre4.com.
+@soa ()
+
+
+r2b A 172.16.0.21
+r3b A 172.16.0.22
