@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="188.0" prefWidth="557.0" style="-fx-background-color: #FBFFF1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ViviendaDuenoController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MORADO/FOTOBUSCADOR.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="242.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="241.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="240.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo del Arriendo">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="396.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="239.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="codigo" layoutX="293.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="42.235626220703125">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="tipo" layoutX="280.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="109.23562622070312">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="estado" layoutX="448.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="42.235626220703125">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="costo" layoutX="366.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="175.23562622070312">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fx:id="descripcion" layoutX="239.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="311.4332275390625">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="395.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="País">
+         <font>
+            <Font name="Tahoma Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="pais" layoutX="433.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="42.235626220703125">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

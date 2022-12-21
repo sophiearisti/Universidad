@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.Aceptado">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FBFFF1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0bdd28e" height="162.0" layoutX="-14.0" layoutY="-14.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1968.0" />
+            <Button fx:id="aceptar" layoutX="619.0" layoutY="629.0" mnemonicParsing="false" onAction="#Acepto" prefHeight="47.0" prefWidth="161.0" style="-fx-background-color: B27657;" text="Arrendar" visible="false">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="61.0" layoutY="27.0" mnemonicParsing="false" onAction="#Atras" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="94.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Model/MORADO/symbole-fleche-gauche-violet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fill="#310a31" layoutX="275.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solicitudes aceptadas para arrendar">
+               <font>
+                  <Font name="Georgia Bold" size="40.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tablasolicitudes" layoutX="363.0" layoutY="177.0" onMouseClicked="#obtenerDatos" prefHeight="335.0" prefWidth="573.0" style="-fx-background-color: #A8A2E2;">
+              <columns>
+                <TableColumn fx:id="propiedad" prefWidth="75.0" text="id propiedad" />
+                  <TableColumn fx:id="propiedad1" prefWidth="143.33251953125" text="Pais" />
+                  <TableColumn fx:id="propiedad11" minWidth="6.66748046875" prefWidth="130.332763671875" text="departamento" />
+                  <TableColumn fx:id="propiedad12" minWidth="0.0" prefWidth="130.666259765625" text="municipio" />
+                  <TableColumn fx:id="propiedad2" minWidth="0.0" prefWidth="92.0" text="tipo" />
+              </columns>
+            </TableView>
+            <Text fx:id="ERROR" fill="#ff1818" layoutX="151.0" layoutY="549.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="1026.970458984375">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1153.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

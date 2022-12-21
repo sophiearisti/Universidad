@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ControllerEfectivo">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FBFFF1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a8a2e2" height="54.0" layoutX="453.0" layoutY="538.0" stroke="TRANSPARENT" strokeType="INSIDE" width="444.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#310a31" height="150.0" layoutX="-14.0" layoutY="-31.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1370.0" />
+            <Button layoutX="39.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+            <Text fill="WHITE" layoutX="565.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efectivo">
+               <font>
+                  <Font name="Georgia" size="60.0" />
+               </font>
+            </Text>
+            <Text layoutX="289.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el valor en efectivo">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="179.0" fitWidth="175.0" layoutX="1131.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MORADO/White%20Black%20Simple%20Initial%20Logo%20(2).png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="valor" layoutX="425.0" layoutY="321.0" prefHeight="39.0" prefWidth="521.0" promptText="Valor" style="-fx-background-color: transparent;" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b27657" height="92.0" layoutX="452.0" layoutY="635.0" stroke="TRANSPARENT" strokeType="INSIDE" width="444.0" />
+            <Text layoutX="476.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total  a pagar:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="totPagar" layoutX="653.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" wrappingWidth="230.9814910888672">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Line endX="403.6279296875" layoutX="521.0" layoutY="359.0" startX="-100.0" stroke="#b27657" />
+            <Button layoutX="1108.0" layoutY="652.0" mnemonicParsing="false" onAction="#SiguienteEfectivo" style="-fx-background-color: #310a31;" text="Siguiente" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="30.0" />
+               </font>
+            </Button>
+            <Text fx:id="ERROR" fill="#bf4949" layoutX="197.0" layoutY="618.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="944.5020751953125">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="56.0" layoutY="655.0" mnemonicParsing="false" onAction="#atrasEfectivos" prefHeight="58.0" prefWidth="163.0" style="-fx-background-color: #310a31;" text="Atrás" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="30.0" />
+               </font>
+            </Button>
+            <Text layoutX="472.0" layoutY="571.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto abonado">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="abonado" layoutX="655.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" wrappingWidth="230.9814910888672">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Button layoutX="599.0" layoutY="413.0" mnemonicParsing="false" onAction="#AnadirEfectivo" style="-fx-background-color: #310a31;" text="Aceptar" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="30.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

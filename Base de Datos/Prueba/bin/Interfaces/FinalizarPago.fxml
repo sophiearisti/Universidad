@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FBFFF1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ControllerFinalizarPago">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#310a31" height="150.0" layoutX="-14.0" layoutY="-31.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1318.0" />
+      <Button layoutX="39.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: tr;" />
+      <Text fill="WHITE" layoutX="547.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finalizar">
+         <font>
+            <Font name="Georgia" size="60.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="179.0" fitWidth="175.0" layoutX="1131.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(2).png" />
+         </image>
+      </ImageView>
+      <Button fx:id="menu" disable="true" layoutX="1015.0" layoutY="652.0" mnemonicParsing="false" onAction="#Menu" prefHeight="58.0" prefWidth="256.0" style="-fx-background-color: #310a31;" text="Ir a menú" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="30.0" />
+         </font>
+      </Button>
+      <Text fx:id="ERROR" fill="#bf4949" layoutX="194.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="944.5020751953125">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="atras" layoutX="56.0" layoutY="655.0" mnemonicParsing="false" onAction="#Atras" prefHeight="58.0" prefWidth="163.0" style="-fx-background-color: #310a31;" text="Atrás" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="pagar" layoutX="596.0" layoutY="272.0" mnemonicParsing="false" onAction="#GuardarTodoEnLaBDD" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: #f0bcd1;" text="Pagar">
+         <font>
+            <Font name="Tahoma" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="contrato" disable="true" layoutX="505.0" layoutY="418.0" mnemonicParsing="false" onAction="#Contrato" prefHeight="40.0" prefWidth="305.0" style="-fx-background-color: #f0bcd1;" text="Imprimir contrato">
+         <font>
+            <Font name="Tahoma" size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

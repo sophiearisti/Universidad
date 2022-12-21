@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.CrearPropiedad">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0">
+         <children>
+            <Rectangle arcHeight="90.0" arcWidth="70.0" fill="#a7a2e068" height="111.0" layoutX="26.0" layoutY="14.0" stroke="#00000004" strokeType="INSIDE" width="1262.0" />
+            <ImageView fitHeight="143.0" fitWidth="150.0" layoutX="1114.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+            <Text fill="#310a31" layoutX="136.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Propiedad" textAlignment="CENTER" wrappingWidth="1085.8670272827148">
+               <font>
+                  <Font name="Georgia" size="54.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="ubicacion" layoutX="202.0" layoutY="226.0" opacity="0.83" prefHeight="37.0" prefWidth="347.0" promptText="Ubicación" style="-fx-background-color: #f0bdd2;" />
+            <TextField fx:id="cantH" layoutX="203.0" layoutY="302.0" prefHeight="42.0" prefWidth="347.0" promptText="Cantidad de Habitaciones (Solo números)" />
+            <TextField fx:id="valorRenta" layoutX="767.0" layoutY="224.0" prefHeight="40.0" prefWidth="397.0" promptText="Valor de la Renta" />
+            <ComboBox fx:id="Municipio" layoutX="204.0" layoutY="528.0" opacity="0.83" prefHeight="41.0" prefWidth="352.0" promptText="Municipio" style="-fx-background-color: #f0bdd2;" />
+            <Button layoutX="607.0" layoutY="645.0" mnemonicParsing="false" onAction="#guardar" prefHeight="51.0" prefWidth="120.0" style="-fx-background-color: #310A31; -fx-background-radius: 40;" text="GUARDAR" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fx:id="ERROR" disable="true" fill="#c32929" layoutX="53.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="1181.4267196655273">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TextField fx:id="doc" layoutX="765.0" layoutY="382.0" prefHeight="43.0" prefWidth="393.0" promptText="Nro. Documento" />
+            <ComboBox fx:id="tipoDoc" layoutX="768.0" layoutY="302.0" opacity="0.83" prefHeight="42.0" prefWidth="391.0" promptText="Tipo Documento" style="-fx-background-color: #f0bdd2;" />
+            <ComboBox fx:id="tipopropiedad" layoutX="205.0" layoutY="383.0" opacity="0.83" prefHeight="41.0" prefWidth="344.0" promptText="Tipo Propiedad" style="-fx-background-color: #f0bdd2;" />
+            <ComboBox fx:id="Departamento" layoutX="203.0" layoutY="453.0" opacity="0.83" prefHeight="44.0" prefWidth="351.0" promptText="Departamento" style="-fx-background-color: #f0bdd2;" />
+            <Button layoutX="64.0" layoutY="37.0" mnemonicParsing="false" onAction="#devolverCuentaDueno" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Model/MORADO/symbole-fleche-gauche-violet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextArea fx:id="descripcion" layoutX="767.0" layoutY="446.0" prefHeight="127.0" prefWidth="393.0" promptText="Descripcion (max 150 caracteres)" wrapText="true" />
+            <Text fx:id="ERROR1" disable="true" layoutX="776.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="numero de caracteres: " wrappingWidth="171.40850067138672">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Text fx:id="ERROR11" disable="true" fill="#1abc30" layoutX="940.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="53.68675994873047">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

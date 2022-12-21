@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane prefHeight="745.0" prefWidth="1291.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.InfoCuentaCliente">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1292.0">
+         <children>
+            <Rectangle arcHeight="90.0" arcWidth="70.0" fill="#a7a2e069" height="137.0" layoutX="26.0" layoutY="14.0" stroke="#00000004" strokeType="INSIDE" width="1261.0" />
+            <ImageView fitHeight="240.0" fitWidth="218.0" layoutX="1071.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+            <Text fill="#310a31" layoutX="296.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de su cuenta">
+               <font>
+                  <Font name="Georgia" size="60.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nom" editable="false" layoutX="278.0" layoutY="361.0" prefHeight="49.0" prefWidth="695.0" promptText="Nombre" style="-fx-background-color: #a7a2e0;" />
+            <TextField fx:id="ape" editable="false" layoutX="278.0" layoutY="482.0" prefHeight="49.0" prefWidth="693.0" promptText="Apellido" style="-fx-background-color: #a7a2e0;" />
+            <TextField fx:id="cor" editable="false" layoutX="279.0" layoutY="605.0" prefHeight="42.0" prefWidth="695.0" promptText="Correo" style="-fx-background-color: #a7a2e0;" />
+            <TextField fx:id="usuario" editable="false" layoutX="279.0" layoutY="246.0" prefHeight="44.0" prefWidth="694.0" promptText="Usuario" style="-fx-background-color: #a7a2e0;" />
+            <Text layoutX="285.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="284.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="281.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="288.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="52.0" layoutY="45.0" mnemonicParsing="false" style="-fx-background-color: trans;">
+               <graphic>
+                  <ImageView fx:id="back" fitHeight="79.0" fitWidth="84.0" onMouseClicked="#botonRegresar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Model/MORADO/symbole-fleche-gauche-violet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

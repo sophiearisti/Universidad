@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ControllerServicios">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FBFFF1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#310a31" height="150.0" layoutX="-14.0" layoutY="-31.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1370.0" />
+            <Button layoutX="39.0" layoutY="14.0" mnemonicParsing="false" onAction="#devolver" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="78.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Model/MORADO/symbole-fleche-gauche-violet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text fill="WHITE" layoutX="538.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicios">
+               <font>
+                  <Font name="Georgia" size="60.0" />
+               </font>
+            </Text>
+            <Text layoutX="171.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese la cantidad de personas que recibiran cada uno de los servicios a continuación">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="179.0" fitWidth="175.0" layoutX="1131.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(2).png" />
+               </image>
+            </ImageView>
+            <Text layoutX="173.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicio de seguridad">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cantidadSeguridad" layoutX="171.0" layoutY="286.0" prefHeight="39.0" prefWidth="230.0" promptText="Cantidad" style="-fx-background-color: tr;" />
+            <Text layoutX="177.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicio de piscina">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="182.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Servicios adicionales">
+               <font>
+                  <Font name="Georgia Bold" size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cantidadPiscina" layoutX="173.0" layoutY="437.0" prefHeight="35.0" prefWidth="228.0" promptText="Cantidad" style="-fx-background-color: tr;" />
+            <TextField fx:id="cantidadAdicionales" layoutX="171.0" layoutY="567.0" prefHeight="33.0" prefWidth="230.0" promptText="Cantidad" style="-fx-background-color: tr;" />
+            <Button fx:id="addSeg" layoutX="463.0" layoutY="277.0" mnemonicParsing="false" onAction="#AdicionarSeguridad" style="-fx-background-color: #A8A2E2;" text="Adicionar">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addPiscina" layoutX="465.0" layoutY="423.0" mnemonicParsing="false" onAction="#AdicionarPiscina" style="-fx-background-color: #A8A2E2;" text="Adicionar">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="addAdicionales" layoutX="466.0" layoutY="550.0" mnemonicParsing="false" onAction="#AdicionarAdicionales" style="-fx-background-color: #A8A2E2;" text="Adicionar">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="92.0" layoutX="852.0" layoutY="524.0" stroke="BLACK" strokeType="INSIDE" width="413.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b27657" height="92.0" layoutX="452.0" layoutY="635.0" stroke="TRANSPARENT" strokeType="INSIDE" width="444.0" />
+            <Text layoutX="863.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total servicios:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="totServicios" layoutX="1029.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="229.6729736328125">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text layoutX="476.0" layoutY="690.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total  a pagar:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="totPagar" layoutX="653.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--" wrappingWidth="230.9814910888672">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <Line endX="133.0" endY="1.0" layoutX="268.0" layoutY="324.0" startX="-100.0" stroke="#b27657" />
+            <Line endX="133.0" endY="1.0" layoutX="273.0" layoutY="470.0" startX="-100.0" stroke="#b27657" />
+            <Line endX="133.0" endY="1.0" layoutX="273.0" layoutY="601.0" startX="-100.0" stroke="#b27657" />
+            <Button fx:id="siguiente" layoutX="1108.0" layoutY="652.0" mnemonicParsing="false" onAction="#SiguienteServicios" style="-fx-background-color: #310a31;" text="Siguiente" textFill="WHITE">
+               <font>
+                  <Font name="Tahoma" size="30.0" />
+               </font>
+            </Button>
+            <Text fill="#bf4949" layoutX="174.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Si no lo va a adquirir, déjelo en blanco o ponga 0">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="ERROR" fill="#bf4949" layoutX="857.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="411.232421875">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#a8a2e2" layoutX="171.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo por persona:">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#a8a2e2" layoutX="170.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo por persona:">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+            <Text fill="#a8a2e2" layoutX="172.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Costo por persona:">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="CostoSeg" fill="#a8a2e2" layoutX="301.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="100.1884765625">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="CostoPiscina" fill="#a8a2e2" layoutX="300.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="102.1884765625">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="CostosAdicionales" fill="#a8a2e2" layoutX="301.0" layoutY="536.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="100.1884765625">
+               <font>
+                  <Font name="Tahoma" size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

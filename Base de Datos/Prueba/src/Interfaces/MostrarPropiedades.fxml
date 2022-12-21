@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ControllerListarActualizarPropiedad">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #fbfff1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a7a2e068" height="772.0" layoutX="-9.0" layoutY="-6.0" stroke="#00000004" strokeType="INSIDE" width="426.0" />
+            <Text fill="#310a31" layoutX="645.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sus propiedades">
+               <font>
+                  <Font name="Georgia" size="58.0" />
+               </font>
+            </Text>
+            <Button fx:id="atras" layoutX="22.0" layoutY="22.0" mnemonicParsing="false" onAction="#devolver" style="-fx-background-color: tr;">
+               <graphic>
+                  <ImageView fitHeight="88.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Model/MORADO/symbole-fleche-gauche-violet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="199.0" fitWidth="183.0" layoutX="1127.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="eliminar" disable="true" layoutX="56.0" layoutY="686.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #310A31; -fx-background-radius: 40;" text="Eliminar" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text layoutX="456.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seleccione la propiedad que desea eliminar o actualizar. Esta aparecerá en la parte izquierda:" wrappingWidth="795.3738403320312">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="195.0" fitWidth="262.0" layoutX="80.0" layoutY="166.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/FOTOBUSCADOR.jpeg" />
+               </image></ImageView>
+            <Text fx:id="ERROR" fill="#e41f1f" layoutX="52.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="327.94129180908203">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="53.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:" wrappingWidth="86.46318054199219">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="54.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo:" wrappingWidth="86.46318054199219">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="54.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Codigo:" wrappingWidth="86.46318054199219">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="54.0" layoutY="544.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción:" wrappingWidth="112.73005676269531">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="estado" layoutX="142.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="181.14075329291245">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="tipo" layoutX="140.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="181.14075329291245">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="codigo" layoutX="138.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="181.14075329291245">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="descripcion" layoutX="58.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="315.505880856389" />
+            <Button fx:id="actualizar" disable="true" layoutX="221.0" layoutY="686.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #310A31; -fx-background-radius: 40;" text="Actualizar" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text layoutX="54.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arriendo:" wrappingWidth="86.46318054199219">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="costo" disable="true" layoutX="153.0" layoutY="387.0" prefHeight="26.0" prefWidth="208.0" promptText="Costo arriendo" style="-fx-background-color: tr;" />
+            <Line endX="100.0" layoutX="256.0" layoutY="412.0" startX="-100.0" />
+            <HBox layoutX="530.0" layoutY="181.0" prefHeight="514.0" prefWidth="623.0">
+               <children>
+                  <ScrollPane fx:id="scroll" prefHeight="563.0" prefWidth="622.0">
+                     <content>
+                        <GridPane fx:id="grid" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="20.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

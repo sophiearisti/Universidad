@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ControllerCantInquilinos">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="1300.0" style="-fx-background-color: #FBFFF1;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f0bdd28e" height="285.0" layoutX="-57.0" layoutY="41.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1361.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a7a2e06b" height="179.0" layoutX="-31.0" layoutY="336.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="1335.0" />
+            <Rectangle fx:id="cuadropregunta" arcHeight="5.0" arcWidth="5.0" fill="#b074565a" height="107.0" layoutX="298.0" layoutY="543.0" stroke="TRANSPARENT" strokeType="INSIDE" visible="false" width="643.0" />
+            <Button layoutX="7.0" layoutY="43.0" mnemonicParsing="false" onAction="#devolverInfoPropiedad" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="103.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Model/MORADO/symbole-fleche-gauche-violet.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="botonCant" layoutX="589.0" layoutY="267.0" mnemonicParsing="false" onAction="#listoCantidad" style="-fx-background-color: #310A31;" text="Listo" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="siguiente" layoutX="1129.0" layoutY="589.0" mnemonicParsing="false" onAction="#siguiente" style="-fx-background-color: #310A31;" text="Siguiente" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Button>
+            <Text layoutX="256.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese la cantidad de inquilinos que vivirán en la propiedad" wrappingWidth="1249.5596618652344">
+               <font>
+                  <Font name="Tahoma" size="28.0" />
+               </font>
+            </Text>
+            <TextField fx:id="Cantidad" layoutX="388.0" layoutY="176.0" prefHeight="58.0" prefWidth="547.0" promptText="cantidad en numero " />
+            <TextField fx:id="ids" layoutX="132.0" layoutY="396.0" prefHeight="45.0" prefWidth="446.0" promptText="id del inquilino" visible="false" />
+            <Button fx:id="botonids" layoutX="593.0" layoutY="462.0" mnemonicParsing="false" onAction="#ListoIds" style="-fx-background-color: #310A31;" text="Listo" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text fx:id="enunciadoIDs" layoutX="404.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese el ID y nombre del inquilino " visible="false" wrappingWidth="552.9890747070312">
+               <font>
+                  <Font name="Tahoma" size="26.0" />
+               </font>
+            </Text>
+            <Button fx:id="botonpregunta2" layoutX="596.0" layoutY="596.0" mnemonicParsing="false" onAction="#SiPregunta2" style="-fx-background-color: #310A31;" text="SI" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text fx:id="pregunta" layoutX="339.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Está seguro que ese es el id del inquilino?" visible="false" wrappingWidth="611.0142211914062">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="error" fill="#e81b1b" layoutX="197.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ERROR" visible="false" wrappingWidth="1058.7396240234375">
+               <font>
+                  <Font name="Tahoma" size="24.0" />
+               </font>
+            </Text>
+            <Button fx:id="botonpregunta" layoutX="596.0" layoutY="596.0" mnemonicParsing="false" onAction="#SiPregunta1" style="-fx-background-color: #310A31;" text="SI" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Text fx:id="numero" layoutX="982.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="62.8128662109375">
+               <font>
+                  <Font name="Tahoma" size="26.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nombres" layoutX="675.0" layoutY="395.0" prefHeight="45.0" prefWidth="446.0" promptText="Nombre" visible="false" />
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

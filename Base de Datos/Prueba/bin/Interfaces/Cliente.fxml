@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="772.0" prefWidth="1338.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Model.ControllerClienteCuenta">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="750.0" prefWidth="1300.0">
+         <children>
+            <ImageView fitHeight="860.0" fitWidth="1388.0" layoutX="-13.0" layoutY="-72.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/giffff.gif" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a7a2e089" height="835.0" layoutX="-5.0" layoutY="-36.0" stroke="BLACK" strokeType="INSIDE" width="1371.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffd4" height="865.0" layoutX="-8.0" layoutY="-56.0" stroke="BLACK" strokeType="INSIDE" width="376.0" />
+            <ImageView fitHeight="47.0" fitWidth="59.0" layoutX="21.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/icone-loupe-violet.png" />
+               </image>
+            </ImageView>
+            <Text fill="#0000007c" layoutX="131.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="153.0" fitWidth="126.0" layoutX="248.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/White%20Black%20Simple%20Initial%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="20.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/icone-deconnexion-deconnexion-violet.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="60.0" fitWidth="66.0" layoutX="15.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/setting.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="19.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/icone-de-la-maison-pourpre.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="75.0" layoutY="262.0" mnemonicParsing="false" onAction="#BuscarPropiedades" style="-fx-background-color: trabsparent;" text="Buscar propiedades">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button layoutX="64.0" layoutY="358.0" mnemonicParsing="false" onAction="#Intereses" prefHeight="54.0" prefWidth="291.0" style="-fx-background-color: trabsparent;" text="Intereses">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button layoutX="64.0" layoutY="457.0" mnemonicParsing="false" onAction="#Ajustes" prefHeight="54.0" prefWidth="291.0" style="-fx-background-color: trabsparent;" text="Ajustes">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button layoutX="71.0" layoutY="548.0" mnemonicParsing="false" onAction="#CerrarSesion" prefHeight="54.0" prefWidth="291.0" style="-fx-background-color: trabsparent;" text="Cerrar  Sesion">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="281.0" fitWidth="270.0" layoutX="-37.0" layoutY="775.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MORADO/White%20Black%20Simple%20Initial%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="59.0" layoutX="15.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Model/MORADO/eye.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="solicitud" layoutX="65.0" layoutY="168.0" mnemonicParsing="false" onAction="#Solicitudesaceptadas" style="-fx-background-color: trabsparent;" text="Solicitudes Aceptadas">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>
