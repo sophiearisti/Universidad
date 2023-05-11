@@ -11,7 +11,7 @@ class Circulo extends Figura {
     super(iD_Figura, coordenadaCentroX, coordenadaCentroY);
     this.radio = radio;
   }
-
+//ll
 	public double calcularArea() 
 	{	
 		super.setArea(Math.PI * Math.pow(this.radio, 2));
