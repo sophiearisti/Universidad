@@ -1,11 +1,12 @@
 package controlador;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
-public class PleaseProvideControllerClassName {
+public class ControladorFiguras {
 
     @FXML
     private Button BCalcularArea;
@@ -24,3 +25,4 @@ public class PleaseProvideControllerClassName {
     }
 
 }
+
