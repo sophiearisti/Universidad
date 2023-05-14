@@ -4,7 +4,7 @@ public class Cuadrado extends Figura {
 
   private Double lado;
 
-  Cuadrado(String idFigura, Double coordenadaCentroX, Double coordenadaCentroY, Double lado) {
+   public Cuadrado(String idFigura, Double coordenadaCentroX, Double coordenadaCentroY, Double lado) {
     super(idFigura, coordenadaCentroX, coordenadaCentroY);
     this.lado = lado;
   }

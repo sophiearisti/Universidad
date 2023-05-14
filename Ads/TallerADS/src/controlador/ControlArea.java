@@ -64,6 +64,11 @@ public class ControlArea implements Initializable
     	else if(FiguraEscogida.equals("cuadrado"))
 		{
 			CuadroTexto1.setPromptText("lado");
+		}else if(FiguraEscogida.equals("circulo"))
+		{
+			CuadroTexto2.setVisible(false);
+			CuadroTexto1.setPromptText("Radio");
+			
 		}
 	}
     	
@@ -91,7 +96,12 @@ public class ControlArea implements Initializable
     		
     		area=cuadrado.calcular_area();
     		
-    	}
+    	}else if(FiguraEscogida.equals("circulo")) {
+    		
+    		Double Radio= Double.parseDouble(CuadroTexto1.getText());
+    		Circulo circulo =new Circulo("0", 5d,4d, Radio);
+    		area =circulo.calcularArea();
+    	}    	
     	
     	
     	
