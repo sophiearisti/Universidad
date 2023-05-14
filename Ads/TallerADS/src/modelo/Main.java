@@ -13,7 +13,7 @@ public class Main extends Application {
 	public void start(Stage stage) 
 	{
 		try {
-			   Parent root = FXMLLoader.load(getClass().getResource("/vista/PantallaMenuFigura.fxml"));
+			   Parent root = FXMLLoader.load(getClass().getResource("/vista/MenuFigura.fxml"));
 			   Scene scene = new Scene(root);
 			   stage.setScene(scene);
 			   stage.show();
@@ -26,4 +26,5 @@ public class Main extends Application {
 	{
 		launch(args);
 	}
+	
 }	

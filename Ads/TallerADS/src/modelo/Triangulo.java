@@ -1,6 +1,6 @@
 package modelo;
 
-class Triangulo extends Figura
+public class Triangulo extends Figura
 {
   
 private Double Base;
@@ -24,7 +24,7 @@ private Double Base;
   
   
 
-  Triangulo(String iD_Figura, Double coordenadaCentroX,Double coordenadaCentroY, Double altura,Double base)
+  public Triangulo(String iD_Figura, Double coordenadaCentroX,Double coordenadaCentroY, Double altura,Double base)
   {
     super(iD_Figura, coordenadaCentroX, coordenadaCentroY);
     

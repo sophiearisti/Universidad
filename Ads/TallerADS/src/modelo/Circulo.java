@@ -2,7 +2,7 @@ package modelo;
 
 import java.lang.Math;
 
-class Circulo extends Figura {
+public class Circulo extends Figura {
 
   private double radio;
 
