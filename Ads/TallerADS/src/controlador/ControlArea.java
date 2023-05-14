@@ -1,5 +1,6 @@
 package controlador;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -9,53 +10,113 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import modelo.Circulo;
+import modelo.Cuadrado;
+import modelo.Rectangulo;
+import modelo.Triangulo;
+import javafx.fxml.Initializable;
 
-public class ControlMenuFigura implements Initializable{
+
+public class ControlArea implements Initializable
+{
 
     @FXML
-    private Button BSiguiente;
+    private Button BCalcularArea;
 
     @FXML
-    private ComboBox<String> scrollFigura;
+    private Button atras;
     
+    @FXML
+    private TextField CuadroTexto1;
 
     @FXML
-    void MostrarPantallaCalcularArea(ActionEvent event) throws IOException 
-    {
-    	 Stage stage;
-    	 Scene scene;
-    	 Parent root;
-    	 
-    	ControlArea.SetFiguraEscogida(scrollFigura.getValue());
-    	 
-    	root = FXMLLoader.load(getClass().getResource("/vista/pantallaCalcularArea.fxml"));
- 	    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
- 		scene = new Scene(root);
- 		stage.setScene(scene);
- 		stage.show();
-
+    private TextField CuadroTexto2;
     
-    }
+    private static String FiguraEscogida;
+    
+    @FXML
+    private Label resultado;
+
+	
+	public static void SetFiguraEscogida(String figuraEscogida)
+	{
+		FiguraEscogida=figuraEscogida;
+		
+	}
     
     @Override
-   	public void initialize(URL arg0, ResourceBundle arg1) 
-   	{
-        ObservableList<String> FigurasList= FXCollections.observableArrayList();
-    	
-    	FigurasList.add("triangulo");
-    	FigurasList.add("cuadrado");
-    	FigurasList.add("rectangulo");
-    	FigurasList.add("circulo");
-    	
-    	scrollFigura.setItems(FigurasList);
+	public void initialize(URL arg0, ResourceBundle arg1) 
+	{
+    	if(FiguraEscogida.equals("triangulo"))
+		{
+			CuadroTexto2.setVisible(true);
+			CuadroTexto1.setPromptText("base");
+			CuadroTexto2.setPromptText("altura");
+		}
+    	else if(FiguraEscogida.equals("cuadrado"))
+		{
+			CuadroTexto1.setPromptText("lado");
+		}
 	}
-   	
+    	
+    
+    @FXML
+    void Calcular(ActionEvent event) 
+    {
+    	Double area=0d;
+    	
+    	if(FiguraEscogida.equals("triangulo"))
+    	{
+    		Double altura=Double.parseDouble (CuadroTexto2.getText());
+    		Double base=Double.parseDouble (CuadroTexto1.getText());
+    		
+    		Triangulo triangulo=new Triangulo("0", 5d,4d, altura,base);
+    		
+    		area=triangulo.calcular_area();
+    		
+    	}
+    	else if(FiguraEscogida.equals("cuadrado"))
+    	{
+    		Double lado=Double.parseDouble (CuadroTexto1.getText());
+    		
+    		Cuadrado cuadrado=new Cuadrado("0", 5d,4d, lado);
+    		
+    		area=cuadrado.calcular_area();
+    		
+    	}
+    	
+    	
+    	
+    	resultado.setText(Double.toString(area));
+    }
+    
+    @FXML
+    void MostrarPantallaMenu(ActionEvent event) throws IOException 
+    {
+	     Stage stage;
+	   	 Scene scene;
+	   	 Parent root;
+	   	 
+   	 
+   	 	root = FXMLLoader.load(getClass().getResource("/vista/MenuFigura.fxml"));
+	    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
 
+    }
+
+
+    
+    
+    
 }
+
