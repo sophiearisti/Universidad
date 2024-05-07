@@ -88,6 +88,11 @@ class MapaUsuariosActivity : AppCompatActivity(), OnMapReadyCallback {
             }
         })
 
+    override fun onRestart(){
+        super.onRestart()
+        configurarLocalizacion()
+    }
+
     //LOCALIZACION
     private lateinit var locationRequest: LocationRequest
     private lateinit var locationCallBack: LocationCallback
