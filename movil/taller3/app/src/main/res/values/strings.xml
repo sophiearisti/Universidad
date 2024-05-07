@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">taller 3</string>
+    <string name="title_activity_mapa_json">MapaJsonActivity</string>
+    <string name="title_activity_mapa_usuarios">MapaUsuarios</string>
+</resources>
